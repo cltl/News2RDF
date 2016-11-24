@@ -1,4 +1,5 @@
 import json
+import logging 
 
 import spacy_to_naf
 import semeval_classes 
@@ -9,7 +10,28 @@ from rdflib import Graph, URIRef, Literal, Namespace
 from rdflib.namespace import RDF, FOAF, DC, DCTERMS
 import datetime
 
-def process_first_x_files(path_signalmedia_json, size=None):
+def start_logger(log_path):
+    '''
+    logger is started
+    '''
+    logger = logging.getLogger(__name__)
+    logger.setLevel(logging.DEBUG)
+
+    # create a file handler
+    handler = logging.FileHandler(log_path,
+                                  mode="w")
+    handler.setLevel(logging.DEBUG)
+
+    # create a logging format
+    formatter = logging.Formatter('%(filename)s - %(asctime)s - %(levelname)s - %(name)s  - %(message)s')
+    handler.setFormatter(formatter)
+
+    # add the handlers to the logger
+    logger.addHandler(handler)
+    
+    return logger 
+
+def process_first_x_files(path_signalmedia_json, start=None, end=None):
     """
     create generator of json objects (representing signalmedia articles)
     
@@ -21,14 +43,20 @@ def process_first_x_files(path_signalmedia_json, size=None):
     :rtype: generator
     :return: generator of json objects
     """
+    if end:
+        line_range = range(start, end+1)
+
     with open(path_signalmedia_json) as infile:
         for counter, line in enumerate(infile, 1):
+
+            if end:
+                if counter not in line_range:
+                    continue            
+                if counter > end:
+                    break
+	
             article = json.loads(line)
-            
-            if counter == size: 
-                break
-            else:
-                yield article
+            yield article
                 
 def load_article_into_newsitem_class(article):
     """
@@ -89,8 +117,10 @@ def load_article_into_newsitem_class(article):
 
 sentenceURI=URIRef("http://longtailcorpus.org/vocab/sent")
 NIF = Namespace("http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#")
+newsItemType=URIRef("http://longtailcorpus.org/NewsItem")
+entityType=URIRef("http://longtailcorpus.org/Entity")
 
-def rdfize_news_item(a_news_item):
+def rdfize_news_item(a_news_item, g):
     """
     convert instance of semeval_classes.NewsItem into RDF
     
@@ -101,15 +131,13 @@ def rdfize_news_item(a_news_item):
     newsItemURIString = "http://longtailcorpus.org/news/%s" % news_item_id
     newsItem = URIRef(newsItemURIString)
 
-    # initialize an empty graph
-    g = Graph()
-
     # Add the news item triples to the graph
     g.add(( newsItem, DCTERMS.source, Literal(news_item_id) ))
     g.add(( newsItem, DCTERMS.isPartOf, Literal(a_news_item.collection) ))
     dct=datetime.datetime.strptime(a_news_item.dct, '%Y-%m-%dT%H:%M:%SZ') # 2015-09-04T10:43:03Z
     g.add(( newsItem, DCTERMS.created, Literal(dct)))
     g.add(( newsItem, DCTERMS.publisher, Literal(a_news_item.publisher)))
+    g.add(( newsItem, RDF.type, newsItemType))
 
     # iterate through the entity mentions
     for entity_mention_obj in a_news_item.entity_mentions:
@@ -125,16 +153,18 @@ def rdfize_news_item(a_news_item):
         g.add((entityMentionURI, NIF.beginIndex, Literal(entity_mention_obj.begin_index)))
         g.add((entityMentionURI, NIF.endIndex, Literal(entity_mention_obj.end_index)))
         g.add((entityMentionURI, sentenceURI, Literal(int(entity_mention_obj.sentence))))
+        g.add((entityMentionURI, RDF.type, entityType))
+        g.add((newsItem, URIRef("http://longtailcorpus.org/vocab/hasMention"), entityMentionURI))
 
-    output_path = 'signalmedia_rdf/%s.ttl' % news_item_id
-    g.serialize(destination=output_path, format='turtle')
+    return g
     
-def json2rdf(article):
+def json2rdf(article, g):
     """
     convert json article into rdf (saved in 'signalmedia_rdf')
     
     :param dict article: json of signalmedia article (dict in python)
     """
     a_news_item = load_article_into_newsitem_class(article)
-    rdfize_news_item(a_news_item)
+    g = rdfize_news_item(a_news_item, g)
+    return g
     
