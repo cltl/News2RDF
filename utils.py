@@ -9,6 +9,7 @@ nlp = English()
 from rdflib import Graph, URIRef, Literal, Namespace
 from rdflib.namespace import RDF, FOAF, DC, DCTERMS
 import datetime
+import re
 
 def start_logger(log_path):
     '''
@@ -120,6 +121,9 @@ NIF = Namespace("http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#
 newsItemType=URIRef("http://longtailcorpus.org/NewsItem")
 entityType=URIRef("http://longtailcorpus.org/Entity")
 
+def create_publisher_uri(p):
+    return ('http://longtailcorpus.org/publisher/%s' % re.sub(r'\W+', '', p))
+
 def rdfize_news_item(a_news_item, g):
     """
     convert instance of semeval_classes.NewsItem into RDF
@@ -136,7 +140,7 @@ def rdfize_news_item(a_news_item, g):
     g.add(( newsItem, DCTERMS.isPartOf, Literal(a_news_item.collection) ))
     dct=datetime.datetime.strptime(a_news_item.dct, '%Y-%m-%dT%H:%M:%SZ') # 2015-09-04T10:43:03Z
     g.add(( newsItem, DCTERMS.created, Literal(dct)))
-    g.add(( newsItem, DCTERMS.publisher, Literal(a_news_item.publisher)))
+    g.add(( newsItem, DCTERMS.publisher, URIRef(create_publisher_uri(a_news_item.publisher))))
     g.add(( newsItem, RDF.type, newsItemType))
 
     # iterate through the entity mentions

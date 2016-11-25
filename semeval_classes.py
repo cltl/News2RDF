@@ -49,14 +49,24 @@ class NewsItem:
     """
     def __init__(self, identifier, collection,
                  dct, publisher, 
-                 location=None, domain=None):
+                 domain=None):
         self.identifier = identifier  # string, the original document name in the dataset
         self.collection = collection  # which collection does it come from (one of ECB+, SignalMedia, or some WSD dataset)
         self.dct = dct                # e.g. "2005-05-14T02:00:00.000+02:00" -> document creation time
         self.publisher = publisher    # e.g. "Reuters" -> Who is the publisher of the document (e.g. Reuters)
-        self.location = location      # e.g.  "UK" -> What is the location of the publisher (e.g. UK)
+        #self.location = location      # e.g.  "UK" -> What is the location of the publisher (e.g. UK)
         self.domain = domain          # e.g. "crime"  -> one of the topics/domains (we could also use URI identifiers for these if we want to keep more information)
         self.validated = False        # e.g. False -> whether the document is validated
         self.entity_mentions = set()  # set of instances of EntityMention class
         self.concept_mentions = set() # set of instances of ConceptMention class
         self.event_mentions = set()   # set of instances of EventMention class
+
+class Publisher:
+    """
+    class containing information about a publisher
+    """
+    def __init__(self, name, dbpedia_uri, homepage, location_dbpedia_uri):
+        self.name = name
+        self.dbpedia_uri = dbpedia_uri
+        self.homepage = homepage
+        self.location_dbpedia_uri = location_dbpedia_uri
