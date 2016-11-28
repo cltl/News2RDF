@@ -7,7 +7,7 @@ from spacy.en import English
 nlp = English()
 
 from rdflib import Graph, URIRef, Literal, Namespace
-from rdflib.namespace import RDF, FOAF, DC, DCTERMS
+from rdflib.namespace import RDF, FOAF, DC, OWL, DCTERMS
 import datetime
 import re
 
@@ -171,4 +171,21 @@ def json2rdf(article, g):
     a_news_item = load_article_into_newsitem_class(article)
     g = rdfize_news_item(a_news_item, g)
     return g
-    
+
+def locations2rdf():
+    j=open('locations.json', 'r')
+    locations=json.load(j)
+    g=Graph()
+    locations_rdf="locations.ttl"
+    for publisher in locations:
+        pubURI=URIRef(create_publisher_uri(publisher))
+        if "homepage" in locations[publisher]:
+            g.add((pubURI, FOAF.homepage, URIRef(locations[publisher]["homepage"])))
+        g.add((pubURI, DCTERMS.title, Literal(locations[publisher]["name"])))
+        if "dbpedia_uri" in locations[publisher]:
+            g.add((pubURI, OWL.sameAs, URIRef(locations[publisher]["dbpedia_uri"])))
+        if "location_dbpedia_uri" in locations[publisher]:
+            g.add((pubURI, DCTERMS.spatial, URIRef(locations[publisher]["location_dbpedia_uri"])))
+        g.add((pubURI, RDF.type, URIRef("http://longtailcorpus.org/Publisher")))
+        g.serialize(destination=locations_rdf, format='turtle')
+    j.close()

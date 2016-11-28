@@ -1,0 +1,518 @@
+@prefix ns1: <http://purl.org/dc/terms/> .
+@prefix ns2: <http://xmlns.com/foaf/0.1/> .
+@prefix ns3: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://longtailcorpus.org/publisher/19ActionNews> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Ohio> ;
+    ns1:title "19 Action News" ;
+    ns3:sameAs <http://dbpedia.org/page/WOIO> ;
+    ns2:homepage <http://www.cleveland19.com/> .
+
+<http://longtailcorpus.org/publisher/4Traders> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "4 Traders" ;
+    ns2:homepage <http://www.4-traders.com/> .
+
+<http://longtailcorpus.org/publisher/AMBest> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "A.M. Best" ;
+    ns3:sameAs <http://dbpedia.org/resource/A.M._Best> ;
+    ns2:homepage <http://www.ambest.com/home/default.aspx> .
+
+<http://longtailcorpus.org/publisher/AllAfricacom> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Africa> ;
+    ns1:title "AllAfrica.com" ;
+    ns3:sameAs <http://dbpedia.org/resource/AllAfrica.com> ;
+    ns2:homepage <http://allafrica.com/> .
+
+<http://longtailcorpus.org/publisher/AmericanBankingNews> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "American Banking News" ;
+    ns2:homepage <https://www.americanbankingnews.com/> .
+
+<http://longtailcorpus.org/publisher/AmericanBankingNewsForex> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "American Banking News - Forex" ;
+    ns2:homepage <https://www.americanbankingnews.com/> .
+
+<http://longtailcorpus.org/publisher/AppViralNewsChartcom> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "App.ViralNewsChart.com" ;
+    ns2:homepage <http://app.viralnewschart.com/> .
+
+<http://longtailcorpus.org/publisher/BayouBuzz> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Louisiana> ;
+    ns1:title "Bayou Buzz" ;
+    ns2:homepage <http://www.bayoubuzz.com/> .
+
+<http://longtailcorpus.org/publisher/BeforeItsNews> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "Before It's News",
+        "Before Its News" ;
+    ns2:homepage <http://beforeitsnews.com/> .
+
+<http://longtailcorpus.org/publisher/Benzingacom> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "Benzinga.com" ;
+    ns2:homepage <http://www.benzinga.com/> .
+
+<http://longtailcorpus.org/publisher/BigNewsNetwork> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "Big News Network" ;
+    ns2:homepage <http://www.bignewsnetwork.com/> .
+
+<http://longtailcorpus.org/publisher/BioSpace> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "BioSpace" ;
+    ns2:homepage <http://www.biospace.com/> .
+
+<http://longtailcorpus.org/publisher/Bloomberg> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "Bloomberg" ;
+    ns3:sameAs <http://dbpedia.org/resource/Bloomberg_News> ;
+    ns2:homepage <http://www.bloomberg.com/> .
+
+<http://longtailcorpus.org/publisher/BrisbaneTimes> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Queensland> ;
+    ns1:title "Brisbane Times" ;
+    ns3:sameAs <http://dbpedia.org/resource/Brisbane_Times> ;
+    ns2:homepage <http://www.brisbanetimes.com.au/> .
+
+<http://longtailcorpus.org/publisher/CEOWorldMagazine> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "CEOWorld Magazine" ;
+    ns2:homepage <http://ceoworld.biz/> .
+
+<http://longtailcorpus.org/publisher/CNBC> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "CNBC" ;
+    ns3:sameAs <http://dbpedia.org/resource/CNBC> ;
+    ns2:homepage <http://www.cnbc.com/world/?region=world> .
+
+<http://longtailcorpus.org/publisher/CNETNews> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "CNET News" ;
+    ns3:sameAs <http://dbpedia.org/resource/CNET> ;
+    ns2:homepage <https://www.cnet.com/> .
+
+<http://longtailcorpus.org/publisher/CWRichmondWUPV> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Richmond,_Virginia> ;
+    ns1:title "CW Richmond WUPV" ;
+    ns2:homepage <http://www.cwrichmond.tv/> .
+
+<http://longtailcorpus.org/publisher/DailyMeCom> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "DailyMe.Com" ;
+    ns2:homepage <http://dailyme.com/> .
+
+<http://longtailcorpus.org/publisher/DailyNews724com> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "DailyNews724.com" ;
+    ns2:homepage <http://www.dailynews724.com/> .
+
+<http://longtailcorpus.org/publisher/DangoteNewscom> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "DangoteNews.com" .
+
+<http://longtailcorpus.org/publisher/DigitalJournal> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Canada> ;
+    ns1:title "Digital Journal" ;
+    ns3:sameAs <http://dbpedia.org/resource/Digital_Journal> ;
+    ns2:homepage <http://www.digitaljournal.com/> .
+
+<http://longtailcorpus.org/publisher/EINNews> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "EIN News" ;
+    ns2:homepage <http://www.einnews.com/> .
+
+<http://longtailcorpus.org/publisher/EconomicTimes> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/India> ;
+    ns1:title "Economic Times" ;
+    ns2:homepage <http://economictimes.indiatimes.com/> .
+
+<http://longtailcorpus.org/publisher/EnvironmentGurucom> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "EnvironmentGuru.com" ;
+    ns2:homepage <http://www.environmentguru.com/> .
+
+<http://longtailcorpus.org/publisher/FatPitchFinancials> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "Fat Pitch Financials" ;
+    ns2:homepage <http://www.fatpitchfinancials.com/> .
+
+<http://longtailcorpus.org/publisher/FinancialContent> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "Financial Content" ;
+    ns2:homepage <http://www.financialcontent.com/> .
+
+<http://longtailcorpus.org/publisher/GoodDaySacramento> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Sacramento,_California> ;
+    ns1:title "Good Day Sacramento" ;
+    ns3:sameAs <http://dbpedia.org/resource/KMAX-TV> ;
+    ns2:homepage <http://sacramento.cbslocal.com/> .
+
+<http://longtailcorpus.org/publisher/GreenfieldDailyReporter> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Hancock_County,_Mississippi> ;
+    ns1:title "Greenfield Daily Reporter" ;
+    ns2:homepage <http://www.greenfieldreporter.com/> .
+
+<http://longtailcorpus.org/publisher/Guardiancouk> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_Kingdom> ;
+    ns1:title "Guardian.co.uk" ;
+    ns3:sameAs <http://dbpedia.org/resource/Guardian.co.uk> ;
+    ns2:homepage <https://www.theguardian.com/international> .
+
+<http://longtailcorpus.org/publisher/HindustanTimes> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/India> ;
+    ns1:title "Hindustan Times" ;
+    ns3:sameAs <http://dbpedia.org/resource/Hindustan_Times> ;
+    ns2:homepage <http://www.hindustantimes.com/> .
+
+<http://longtailcorpus.org/publisher/Hubii> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "Hubii" ;
+    ns2:homepage <http://hubii.com/> .
+
+<http://longtailcorpus.org/publisher/Individualcom> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "Individual.com" ;
+    ns2:homepage <http://individual.com/sample.php> .
+
+<http://longtailcorpus.org/publisher/KHQRightNow> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Spokane,_Washington> ;
+    ns1:title "KHQ Right Now" ;
+    ns2:homepage <http://www.khq.com/> .
+
+<http://longtailcorpus.org/publisher/KRHDTV> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Bryan,_Texas> ;
+    ns1:title "KRHD TV" ;
+    ns2:homepage <http://www.abc40.com/> .
+
+<http://longtailcorpus.org/publisher/KSWO> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Lawton,_Oklahoma> ;
+    ns1:title "KSWO" ;
+    ns2:homepage <http://www.kswo.com/> .
+
+<http://longtailcorpus.org/publisher/KUSIcom> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/San_Diego> ;
+    ns1:title "KUSI.com" ;
+    ns3:sameAs <http://dbpedia.org/resource/KUSI-TV> ;
+    ns2:homepage <http://www.kusi.com/> .
+
+<http://longtailcorpus.org/publisher/KYTXCBS19> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Texas> ;
+    ns1:title "KYTX CBS 19" ;
+    ns2:homepage <http://www.cbs19.tv/> .
+
+<http://longtailcorpus.org/publisher/Kait8> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Jonesboro,_Arkansas> ;
+    ns1:title "Kait 8" ;
+    ns2:homepage <http://www.kait8.com/> .
+
+<http://longtailcorpus.org/publisher/LatestNigerianNewscom> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Nigeria> ;
+    ns1:title "Latest Nigerian News.com" ;
+    ns2:homepage <http://www.latestnigeriannews.com/> .
+
+<http://longtailcorpus.org/publisher/LocalNews7com> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "LocalNews7.com" ;
+    ns2:homepage <http://localnews7.com/> .
+
+<http://longtailcorpus.org/publisher/MailOnlineUK> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_Kingdom> ;
+    ns1:title "Mail Online UK" ;
+    ns3:sameAs <http://dbpedia.org/resource/Daily_Mail> ;
+    ns2:homepage <http://www.dailymail.co.uk/home/index.html> .
+
+<http://longtailcorpus.org/publisher/MarketPulseNavigator> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "Market Pulse Navigator" .
+
+<http://longtailcorpus.org/publisher/Marketplace> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "Marketplace" ;
+    ns3:sameAs <http://dbpedia.org/resource/Marketplace_(radio_program)> ;
+    ns2:homepage <https://www.marketplace.org/> .
+
+<http://longtailcorpus.org/publisher/MelbourneAge> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Melbourne> ;
+    ns1:title "Melbourne Age" ;
+    ns3:sameAs <http://dbpedia.org/resource/Melbourne_Age> ;
+    ns2:homepage <http://www.theage.com.au/> .
+
+<http://longtailcorpus.org/publisher/MichiganLive> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Michigan> ;
+    ns1:title "Michigan Live" ;
+    ns2:homepage <http://www.mlive.com/#/0> .
+
+<http://longtailcorpus.org/publisher/MinneapolisStarTribune> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Minnesota> ;
+    ns1:title "Minneapolis Star Tribune" ;
+    ns3:sameAs <http://dbpedia.org/resource/Minneapolis_Star_Tribune> ;
+    ns2:homepage <http://www.startribune.com/> .
+
+<http://longtailcorpus.org/publisher/MoneyShowcom> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "MoneyShow.com" ;
+    ns2:homepage <http://www.moneyshow.com/> .
+
+<http://longtailcorpus.org/publisher/MyInforms> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "MyInforms" ;
+    ns2:homepage <http://myinforms.com/> .
+
+<http://longtailcorpus.org/publisher/NEWScomau> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Australia> ;
+    ns1:title "NEWS.com.au" ;
+    ns3:sameAs <http://dbpedia.org/resource/News.com.au> ;
+    ns2:homepage <http://www.news.com.au/> .
+
+<http://longtailcorpus.org/publisher/Nasdaq> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "Nasdaq" ;
+    ns2:homepage <http://www.nasdaq.com/news/> .
+
+<http://longtailcorpus.org/publisher/NewsOnFeedscom> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "NewsOnFeeds.com" .
+
+<http://longtailcorpus.org/publisher/NewsRin> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/India> ;
+    ns1:title "NewsR.in" ;
+    ns2:homepage <http://www.newsr.in/> .
+
+<http://longtailcorpus.org/publisher/NigerianHeraldcom> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Nigeria> ;
+    ns1:title "NigerianHerald.com" .
+
+<http://longtailcorpus.org/publisher/PRWeb> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "PRWeb" ;
+    ns3:sameAs <http://dbpedia.org/resource/PRWeb> ;
+    ns2:homepage <http://www.prweb.com/> .
+
+<http://longtailcorpus.org/publisher/PettingaFinancialAdvisors> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "Pettinga Financial Advisors" ;
+    ns2:homepage <http://pettinga.com/> .
+
+<http://longtailcorpus.org/publisher/Phillycom> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Philadelphia> ;
+    ns1:title "Philly.com" ;
+    ns3:sameAs <http://dbpedia.org/resource/Philadelphia_Media_Network> ;
+    ns2:homepage <http://www.philly.com/> .
+
+<http://longtailcorpus.org/publisher/RCLAdvisors> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "RCL Advisors" ;
+    ns2:homepage <http://www.rcladvisors.com/> .
+
+<http://longtailcorpus.org/publisher/RelianceTrust> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "Reliance Trust" ;
+    ns2:homepage <http://www.reliance-trust.com/> .
+
+<http://longtailcorpus.org/publisher/Reuters> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "Reuters" ;
+    ns3:sameAs <http://dbpedia.org/resource/Reuters> ;
+    ns2:homepage <http://www.reuters.com/> .
+
+<http://longtailcorpus.org/publisher/ReutersUK> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_Kingdom> ;
+    ns1:title "Reuters UK" ;
+    ns3:sameAs <http://dbpedia.org/resource/Reuters_UK> .
+
+<http://longtailcorpus.org/publisher/SearchBug> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "SearchBug" ;
+    ns2:homepage <https://www.searchbug.com/> .
+
+<http://longtailcorpus.org/publisher/SleekMoney> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "SleekMoney" ;
+    ns2:homepage <http://sleekmoney.com/> .
+
+<http://longtailcorpus.org/publisher/StockNod> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "Stock Nod" ;
+    ns2:homepage <http://www.stocknod.com/> .
+
+<http://longtailcorpus.org/publisher/SydneyMorningHerald> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Sydney> ;
+    ns1:title "Sydney Morning Herald" ;
+    ns3:sameAs <http://dbpedia.org/resource/Sydney_Morning_Herald> ;
+    ns2:homepage <http://www.smh.com.au/> .
+
+<http://longtailcorpus.org/publisher/SysConMedia> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "Sys-Con Media" ;
+    ns2:homepage <http://www.sys-con.com/> .
+
+<http://longtailcorpus.org/publisher/TechInvestorNews> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "Tech Investor News" ;
+    ns2:homepage <http://www.techinvestornews.com/> .
+
+<http://longtailcorpus.org/publisher/TheHindu> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/India> ;
+    ns1:title "The Hindu" ;
+    ns3:sameAs <http://dbpedia.org/resource/The_Hindu> ;
+    ns2:homepage <http://www.thehindu.com/> .
+
+<http://longtailcorpus.org/publisher/TheStreetcom> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "TheStreet.com" ;
+    ns3:sameAs <http://dbpedia.org/resource/TheStreet.com> ;
+    ns2:homepage <https://www.thestreet.com/> .
+
+<http://longtailcorpus.org/publisher/TickerReport> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "Ticker Report" ;
+    ns2:homepage <https://www.tickerreport.com/about-tickerreport-com> .
+
+<http://longtailcorpus.org/publisher/TickerTechcom> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "TickerTech.com" ;
+    ns2:homepage <http://tickertech.com/> .
+
+<http://longtailcorpus.org/publisher/TimesofIndia> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/India> ;
+    ns1:title "Times of India" ;
+    ns3:sameAs <http://dbpedia.org/resource/Times_of_India> ;
+    ns2:homepage <http://timesofindia.indiatimes.com/> .
+
+<http://longtailcorpus.org/publisher/TownHall> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "Town Hall" ;
+    ns2:homepage <http://townhall.com/> .
+
+<http://longtailcorpus.org/publisher/UAENewsAppcom> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "UAE NewsApp.com" ;
+    ns2:homepage <http://www.uaenewsapp.com/?langId=2> .
+
+<http://longtailcorpus.org/publisher/UTSanDiego> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/San_Diego> ;
+    ns1:title "U-T San Diego" ;
+    ns3:sameAs <http://dbpedia.org/resource/The_San_Diego_Union-Tribune> ;
+    ns2:homepage <http://www.sandiegouniontribune.com/> .
+
+<http://longtailcorpus.org/publisher/Ulitzer> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "Ulitzer" ;
+    ns3:sameAs <http://dbpedia.org/resource/Ulitzer> ;
+    ns2:homepage <http://www.ulitzer.com/> .
+
+<http://longtailcorpus.org/publisher/Uncova> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "Uncova" ;
+    ns2:homepage <http://uncova.com/> .
+
+<http://longtailcorpus.org/publisher/VirtualStrategyMagazine> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "Virtual Strategy Magazine" ;
+    ns2:homepage <http://virtual-strategy.com/> .
+
+<http://longtailcorpus.org/publisher/VirtualizationConferenceExpo> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "Virtualization Conference & Expo" ;
+    ns2:homepage <http://www.virtualizationconference.com/> .
+
+<http://longtailcorpus.org/publisher/VisionMonday> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "Vision Monday" ;
+    ns2:homepage <http://www.visionmonday.com/> .
+
+<http://longtailcorpus.org/publisher/WAFB> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Baton_Rouge,_Louisiana> ;
+    ns1:title "WAFB" ;
+    ns3:sameAs <http://dbpedia.org/resource/WAFB> ;
+    ns2:homepage <http://www.wafb.com/> .
+
+<http://longtailcorpus.org/publisher/WAToday> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Australia> ;
+    ns1:title "WA Today" ;
+    ns3:sameAs <http://dbpedia.org/resource/WA_Today> ;
+    ns2:homepage <http://www.watoday.com.au/> .
+
+<http://longtailcorpus.org/publisher/WDAMTV> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Laurel,_Mississippi> ;
+    ns1:title "WDAM-TV" ;
+    ns3:sameAs <http://dbpedia.org/resource/WDAM-TV> ;
+    ns2:homepage <http://www.wdam.com/> .
+
+<http://longtailcorpus.org/publisher/WKRBNews> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Salt_Lake_City> ;
+    ns1:title "WKRB News" ;
+    ns2:homepage <http://www.wkrb13.com/> .
+
+<http://longtailcorpus.org/publisher/WMCTVcom> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Memphis,_Tennessee> ;
+    ns1:title "WMCTV.com" ;
+    ns2:homepage <http://www.wmcactionnews5.com/> .
+
+<http://longtailcorpus.org/publisher/WSFA> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Alabama> ;
+    ns1:title "WSFA" ;
+    ns3:sameAs <http://dbpedia.org/resource/WSFA> ;
+    ns2:homepage <http://www.wsfa.com/> .
+
+<http://longtailcorpus.org/publisher/WTRF> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Ohio> ;
+    ns1:title "WTRF" ;
+    ns3:sameAs <http://dbpedia.org/resource/WTRF> ;
+    ns2:homepage <http://www.yourohiovalley.com/> .
+
+<http://longtailcorpus.org/publisher/WXTXFox54> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Columbus,_Georgia> ;
+    ns1:title "WXTX Fox 54" ;
+    ns2:homepage <http://www.wxtx.com/> .
+
+<http://longtailcorpus.org/publisher/WallStreetBusinessNetwork> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/page/United_States> ;
+    ns1:title "Wall Street Business Network" ;
+    ns2:homepage <http://salemmedia.com/stationcat/business-talk-the-wall-street-radio-network/> .
+
+<http://longtailcorpus.org/publisher/WallStreetSelect> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "Wall Street Select" ;
+    ns2:homepage <http://www.wallstreetselect.com/> .
+
+<http://longtailcorpus.org/publisher/WestAustralian> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Australia> ;
+    ns1:title "West Australian" ;
+    ns2:homepage <https://au.news.yahoo.com/thewest/> .
+
+<http://longtailcorpus.org/publisher/WorldNetDaily> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_States> ;
+    ns1:title "WorldNetDaily" ;
+    ns3:sameAs <http://dbpedia.org/resource/WorldNetDaily> ;
+    ns2:homepage <http://www.wnd.com/> .
+
+<http://longtailcorpus.org/publisher/YahooCanada> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Canada> ;
+    ns1:title "Yahoo! Canada" ;
+    ns3:sameAs <http://dbpedia.org/resource/Yahoo!_Canada> ;
+    ns2:homepage <https://www.yahoo.com/> .
+
+<http://longtailcorpus.org/publisher/YahooFinance> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "Yahoo! Finance" ;
+    ns3:sameAs <http://dbpedia.org/resource/Yahoo!_Finance> ;
+    ns2:homepage <http://finance.yahoo.com//> .
+
+<http://longtailcorpus.org/publisher/YahooFinanceUKandIreland> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland> ;
+    ns1:title "Yahoo! Finance UK and Ireland" .
+
+<http://longtailcorpus.org/publisher/YahooIndia> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/India> ;
+    ns1:title "Yahoo! India" ;
+    ns2:homepage <https://in.yahoo.com/> .
+
+<http://longtailcorpus.org/publisher/YahooMaktoobNews> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "Yahoo! Maktoob News" ;
+    ns2:homepage <https://en-maktoob.yahoo.com/> .
+
+<http://longtailcorpus.org/publisher/YahooNews> a <http://longtailcorpus.org/Publisher> ;
+    ns1:title "Yahoo! News" ;
+    ns3:sameAs <http://dbpedia.org/resource/Yahoo!_News> ;
+    ns2:homepage <https://www.yahoo.com/news/> .
+
+<http://longtailcorpus.org/publisher/YahooNewsAustralia> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Australia> ;
+    ns1:title "Yahoo! News Australia" ;
+    ns2:homepage <https://au.news.yahoo.com/> .
+
+<http://longtailcorpus.org/publisher/YahooSingapore> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/Singapore> ;
+    ns1:title "Yahoo! Singapore" ;
+    ns2:homepage <https://sg.yahoo.com/> .
+
+<http://longtailcorpus.org/publisher/YahooUKandIreland> a <http://longtailcorpus.org/Publisher> ;
+    ns1:spatial <http://dbpedia.org/resource/United_Kingdom_of_Great_Britain_and_Ireland> ;
+    ns1:title "Yahoo! UK and Ireland" .
+
