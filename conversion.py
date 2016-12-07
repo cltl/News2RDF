@@ -1,5 +1,4 @@
 import utils
-from datetime import datetime
 import argparse
 
 from rdflib import Graph
@@ -12,6 +11,7 @@ parser.add_argument('-s', type=int, dest="batch_size",   help="batch size", requ
 args = parser.parse_args()
 
 path_signalmedia_json = 'signalmedia-1m.jsonl'
+path_newsreader_nafs = 'naf'
 
 for start in range(args.start_line, args.end_line, args.batch_size):
     end = start + args.batch_size
@@ -23,14 +23,15 @@ for start in range(args.start_line, args.end_line, args.batch_size):
     g=Graph()
     logger = utils.start_logger(log_path)
 
-    json_generator = utils.process_first_x_files(path_signalmedia_json, 
-                                                 start=start,
-                                                 end=end)
+    the_generator = utils.process_first_x_files(path_signalmedia_json,
+                                                path_newsreader_nafs=path_newsreader_nafs,
+                                                start=start,
+                                                end=end)
 
-    for counter, article in enumerate(json_generator, start): 
-        g=utils.json2rdf(article, g)
+    for counter, info_about_news_item in enumerate(the_generator, start):
+        g=utils.json2rdf(info_about_news_item, g)
+        break
+        #if counter % 100 == 0:
+        #    logger.info('processed %s files' % counter)
 
-        if counter % 100 == 0:
-            logger.info('processed %s files' % counter)
-
-    g.serialize(destination=output_path, format='turtle')
+    #g.serialize(destination=output_path, format='turtle')

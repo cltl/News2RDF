@@ -1,0 +1,781 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<NAF version="v3" xml:lang="en">
+  <nafHeader>
+    <fileDesc creationtime="2015-09-14T05:27:34Z" filename="182a7cfc-b969-4b6b-aba9-ab959b3471a0.in.naf"/>
+    <public publicId="182a7cfc-b969-4b6b-aba9-ab959b3471a0" uri="sigmed/data/182a7cfc-b969-4b6b-aba9-ab959b3471a0.in.naf"/>
+    <linguisticProcessors layer="srl">
+      <lp beginTimestamp="2016-03-03T01:21:11+0100" endTimestamp="2016-03-03T01:21:13+0100" hostname="r29n5.lisa.surfsara.nl" name="ixa-pipe-srl-en" version="1.0"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="topics">
+      <lp beginTimestamp="2016-03-03T01:19:53+0100" endTimestamp="2016-03-03T01:19:57+0100" hostname="r29n5.lisa.surfsara.nl" name="ixa-pipe-topic-en" version="1.0.1-e5736af6cd0dabc10434ad6dcdaa86ecf361896c"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="text">
+      <lp beginTimestamp="2016-03-03T01:19:53+0100" endTimestamp="2016-03-03T01:19:53+0100" hostname="r29n5.lisa.surfsara.nl" name="ixa-pipe-tok-en" version="1.8.0-56f83ce4b61680346f15e5d4e6de6293764f7383"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="causalRelations">
+      <lp beginTimestamp="2016-03-03T01:21:24+0100" endTimestamp="2016-03-03T01:21:26+0100" hostname="r29n5.lisa.surfsara.nl" name="CausalRelPro-FBK" version="2.0.0"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="coreferences">
+      <lp beginTimestamp="2016-03-03T00:20:58Z" endTimestamp="2016-03-03T00:21:03Z" hostname="r29n5.lisa.surfsara.nl" name="corefgraph-en" version="0.8"/>
+      <lp beginTimestamp="2016-03-03T01:21:30+0100" endTimestamp="2016-03-03T01:21:30+0100" hostname="r29n5.lisa.surfsara.nl" name="vua-event-coref-intradoc-wn-sim" timestamp="2016-03-03T01:21:30+0100" version="3.0"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="constituency">
+      <lp beginTimestamp="2016-03-03T01:20:00+0100" endTimestamp="2016-03-03T01:20:07+0100" hostname="r29n5.lisa.surfsara.nl" name="ixa-pipe-parse-en-parser-chunking" version="1.1.1-f4c6e03b9afd8b70d8cf403f43055d28e3b0e874"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="terms">
+      <lp beginTimestamp="2016-03-03T01:19:59+0100" endTimestamp="2016-03-03T01:19:59+0100" hostname="r29n5.lisa.surfsara.nl" name="ixa-pipe-pos-en-maxent-100-c5-baseline-dict-penn" version="1.4.3-192b8ca8980904d09e8d9f7343621174b6b98978"/>
+      <lp beginTimestamp="2016-03-03T00:20:48Z" endTimestamp="2016-03-03T00:20:51Z" hostname="r29n5.lisa.surfsara.nl" name="ukb" version="2.0.22.g0edc5ba"/>
+      <lp beginTimestamp="2016-03-03T01:20:58CET" endTimestamp="2016-03-03T01:20:58CET" hostname="r29n5.lisa.surfsara.nl" name="It_Makes_Sense_WSD" timestamp="2016-03-03T01:20:58CET" version="0.4"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="markables">
+      <lp beginTimestamp="2016-03-03T01:20:48+0100" endTimestamp="2016-03-03T01:20:48+0100" hostname="r29n5.lisa.surfsara.nl" name="ixa-pipe-wikify-en" version="1.2.1-b2d597d79cc928549bf6df6e13894a183be99dcf"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="deps">
+      <lp beginTimestamp="2016-03-03T01:21:11+0100" endTimestamp="2016-03-03T01:21:11+0100" hostname="r29n5.lisa.surfsara.nl" name="ixa-pipe-srl-en" version="1.0"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="temporalRelations">
+      <lp beginTimestamp="2016-03-03T01:21:16+0100" endTimestamp="2016-03-03T01:21:17+0100" hostname="r29n5.lisa.surfsara.nl" name="TempRelPro-FBK" version="2.5.0"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="entities">
+      <lp beginTimestamp="2016-03-03T01:20:08+0100" endTimestamp="2016-03-03T01:20:41+0100" hostname="r29n5.lisa.surfsara.nl" name="ixa-pipe-nerc-en-best-clusters-conll03" version="1.5.4-ca02c931bc0b200ccdb8b5795a7552e4cc0d4802"/>
+      <lp beginTimestamp="2016-03-03T01:20:42+0100" endTimestamp="2016-03-03T01:20:42+0100" hostname="r29n5.lisa.surfsara.nl" name="ixa-pipe-ned-en" version="1.1.1-d35d4df5cb71940bf642bb1a83e2b5b7584010df"/>
+      <lp beginTimestamp="2016-03-03T01:20:46CET" endTimestamp="2016-03-03T01:20:46CET" hostname="r29n5.lisa.surfsara.nl" name="VUA-popen-ned-reranker" timestamp="2016-03-03T01:20:46CET" version="1.0"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="timeExpressions">
+      <lp beginTimestamp="2016-03-03T01:21:13+0100" endTimestamp="2016-03-03T01:21:15+0100" hostname="r29n5.lisa.surfsara.nl" name="TimePro-FBK" version="v1.5, based on Yamcha"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="factualities">
+      <lp name="vua-perspectives_factuality" version="1.0" timestamp="2016-03-03T01:21:31CET" beginTimestamp="2016-03-03T01:21:31CET" endTimestamp="2016-03-03T01:21:31CET" hostname="r29n5.lisa.surfsara.nl"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="opinions">
+      <lp name="Deluxe opinion miner (CRF+SVM)" version="10jan2014_2.0" timestamp="2016-03-03T01:21:32CET" beginTimestamp="2016-03-03T01:21:32CET" endTimestamp="2016-03-03T01:21:32CET" hostname="r29n5.lisa.surfsara.nl"/>
+    </linguisticProcessors>
+  </nafHeader>
+  <raw>In order to encourage innovation and entrepreneurship in Africa, EMRC will present the \</raw>
+  <text>
+    <wf id="w1" length="2" offset="0" para="1" sent="1">In</wf>
+    <wf id="w2" length="5" offset="3" para="1" sent="1">order</wf>
+    <wf id="w3" length="2" offset="9" para="1" sent="1">to</wf>
+    <wf id="w4" length="9" offset="12" para="1" sent="1">encourage</wf>
+    <wf id="w5" length="10" offset="22" para="1" sent="1">innovation</wf>
+    <wf id="w6" length="3" offset="33" para="1" sent="1">and</wf>
+    <wf id="w7" length="16" offset="37" para="1" sent="1">entrepreneurship</wf>
+    <wf id="w8" length="2" offset="54" para="1" sent="1">in</wf>
+    <wf id="w9" length="6" offset="57" para="1" sent="1">Africa</wf>
+    <wf id="w10" length="1" offset="63" para="1" sent="1">,</wf>
+    <wf id="w11" length="4" offset="65" para="1" sent="1">EMRC</wf>
+    <wf id="w12" length="4" offset="70" para="1" sent="1">will</wf>
+    <wf id="w13" length="7" offset="75" para="1" sent="1">present</wf>
+    <wf id="w14" length="3" offset="83" para="1" sent="1">the</wf>
+    <wf id="w15" length="1" offset="87" para="1" sent="1">\</wf>
+  </text>
+  <terms>
+    <term id="t1" lemma="in" morphofeat="IN" pos="P" type="close">
+      <span>
+        <!--In-->
+        <target id="w1"/>
+      </span>
+    </term>
+    <term id="t2" lemma="order" morphofeat="NN" pos="N" type="open">
+      <span>
+        <!--order-->
+        <target id="w2"/>
+      </span>
+      <externalReferences>
+        <externalRef confidence="0.313375" reference="ili-30-07168623-n" resource="wn30g.bin64"/>
+        <externalRef confidence="0.10483" reference="ili-30-05091316-n" resource="wn30g.bin64"/>
+        <externalRef confidence="0.10153" reference="ili-30-08456993-n" resource="wn30g.bin64"/>
+        <externalRef confidence="0.075497" reference="ili-30-13968547-n" resource="wn30g.bin64"/>
+        <externalRef confidence="0.0695261" reference="ili-30-06539770-n" resource="wn30g.bin64"/>
+        <externalRef confidence="0.0573189" reference="ili-30-14496710-n" resource="wn30g.bin64"/>
+        <externalRef confidence="0.0504686" reference="ili-30-06529219-n" resource="wn30g.bin64"/>
+        <externalRef confidence="0.0375608" reference="ili-30-08227214-n" resource="wn30g.bin64"/>
+        <externalRef confidence="0.0361794" reference="ili-30-01009871-n" resource="wn30g.bin64"/>
+        <externalRef confidence="0.0324304" reference="ili-30-06652878-n" resource="wn30g.bin64"/>
+        <externalRef confidence="0.0273882" reference="ili-30-08147794-n" resource="wn30g.bin64"/>
+        <externalRef confidence="0.026252" reference="ili-30-04698656-n" resource="wn30g.bin64"/>
+        <externalRef confidence="0.0238233" reference="ili-30-08106934-n" resource="wn30g.bin64"/>
+        <externalRef confidence="0.0221767" reference="ili-30-07279687-n" resource="wn30g.bin64"/>
+        <externalRef confidence="0.0216434" reference="ili-30-13950812-n" resource="wn30g.bin64"/>
+        <externalRef confidence="0.15156785" reference="ili-30-07168623-n" resource="WordNet-3.0"/>
+        <externalRef confidence="0.11571513" reference="ili-30-08456993-n" resource="WordNet-3.0"/>
+        <externalRef confidence="0.090218976" reference="ili-30-06539770-n" resource="WordNet-3.0"/>
+        <externalRef confidence="0.08813002" reference="ili-30-13968547-n" resource="WordNet-3.0"/>
+        <externalRef confidence="0.16510384" reference="ili-30-14496710-n" resource="WordNet-3.0"/>
+        <externalRef confidence="0.09233731" reference="ili-30-06529219-n" resource="WordNet-3.0"/>
+        <externalRef confidence="0.0994761" reference="ili-30-06652878-n" resource="WordNet-3.0"/>
+        <externalRef confidence="0.09946172" reference="ili-30-05091316-n" resource="WordNet-3.0"/>
+        <externalRef confidence="0.09798907" reference="ili-30-08227214-n" resource="WordNet-3.0"/>
+        <externalRef reference="ili-30-04698656-n" resource="WordNet-3.0"/>
+        <externalRef reference="ili-30-08106934-n" resource="WordNet-3.0"/>
+        <externalRef reference="ili-30-01009871-n" resource="WordNet-3.0"/>
+        <externalRef reference="ili-30-07279687-n" resource="WordNet-3.0"/>
+      </externalReferences>
+    </term>
+    <term id="t3" lemma="to" morphofeat="TO" pos="P" type="close">
+      <span>
+        <!--to-->
+        <target id="w3"/>
+      </span>
+    </term>
+    <term id="t4" lemma="encourage" morphofeat="VB" pos="V" type="open">
+      <span>
+        <!--encourage-->
+        <target id="w4"/>
+      </span>
+      <externalReferences>
+        <externalRef confidence="0.769635" reference="ili-30-02554922-v" resource="wn30g.bin64"/>
+        <externalRef confidence="0.188042" reference="ili-30-01818235-v" resource="wn30g.bin64"/>
+        <externalRef confidence="0.0423226" reference="ili-30-00771341-v" resource="wn30g.bin64"/>
+        <externalRef confidence="0.45852563" reference="ili-30-02554922-v" resource="WordNet-3.0"/>
+        <externalRef confidence="0.27443454" reference="ili-30-01818235-v" resource="WordNet-3.0"/>
+        <externalRef confidence="0.2670398" reference="ili-30-00771341-v" resource="WordNet-3.0"/>
+      </externalReferences>
+    </term>
+    <term id="t5" lemma="innovation" morphofeat="NN" pos="N" type="open">
+      <span>
+        <!--innovation-->
+        <target id="w5"/>
+      </span>
+      <externalReferences>
+        <externalRef confidence="0.496762" reference="ili-30-03582658-n" resource="wn30g.bin64"/>
+        <externalRef confidence="0.357156" reference="ili-30-05633385-n" resource="wn30g.bin64"/>
+        <externalRef confidence="0.146083" reference="ili-30-00240184-n" resource="wn30g.bin64"/>
+        <externalRef confidence="0.49522147" reference="ili-30-03582658-n" resource="WordNet-3.0"/>
+        <externalRef confidence="0.5047785" reference="ili-30-05633385-n" resource="WordNet-3.0"/>
+        <externalRef reference="ili-30-00240184-n" resource="WordNet-3.0"/>
+      </externalReferences>
+    </term>
+    <term id="t6" lemma="and" morphofeat="CC" pos="C" type="close">
+      <span>
+        <!--and-->
+        <target id="w6"/>
+      </span>
+    </term>
+    <term id="t7" lemma="entrepreneurship" morphofeat="NN" pos="N" type="open">
+      <span>
+        <!--entrepreneurship-->
+        <target id="w7"/>
+      </span>
+    </term>
+    <term id="t8" lemma="in" morphofeat="IN" pos="P" type="close">
+      <span>
+        <!--in-->
+        <target id="w8"/>
+      </span>
+    </term>
+    <term id="t9" lemma="Africa" morphofeat="NNP" pos="R" type="close">
+      <span>
+        <!--Africa-->
+        <target id="w9"/>
+      </span>
+      <externalReferences>
+        <externalRef confidence="1.0" reference="ili-30-09189411-n" resource="WordNet-3.0"/>
+      </externalReferences>
+    </term>
+    <term id="t10" lemma="," morphofeat="," pos="O" type="close">
+      <span>
+        <!--,-->
+        <target id="w10"/>
+      </span>
+    </term>
+    <term id="t11" lemma="EMRC" morphofeat="NNP" pos="R" type="close">
+      <span>
+        <!--EMRC-->
+        <target id="w11"/>
+      </span>
+    </term>
+    <term id="t12" lemma="will" morphofeat="MD" pos="O" type="close">
+      <span>
+        <!--will-->
+        <target id="w12"/>
+      </span>
+      <externalReferences>
+        <externalRef confidence="0.2738307" reference="ili-30-00698398-v" resource="WordNet-3.0"/>
+        <externalRef confidence="0.23653957" reference="ili-30-00746366-v" resource="WordNet-3.0"/>
+        <externalRef confidence="0.23872556" reference="ili-30-00698398-v" resource="WordNet-3.0"/>
+        <externalRef confidence="0.25090417" reference="ili-30-01824339-v" resource="WordNet-3.0"/>
+        <externalRef reference="ili-30-02229055-v" resource="WordNet-3.0"/>
+      </externalReferences>
+    </term>
+    <term id="t13" lemma="present" morphofeat="VB" pos="V" type="open">
+      <span>
+        <!--present-->
+        <target id="w13"/>
+      </span>
+      <externalReferences>
+        <externalRef confidence="0.250957" reference="ili-30-02148788-v" resource="wn30g.bin64"/>
+        <externalRef confidence="0.175379" reference="ili-30-00772967-v" resource="wn30g.bin64"/>
+        <externalRef confidence="0.110422" reference="ili-30-01711445-v" resource="wn30g.bin64"/>
+        <externalRef confidence="0.0961202" reference="ili-30-02262752-v" resource="wn30g.bin64"/>
+        <externalRef confidence="0.0772896" reference="ili-30-00989602-v" resource="wn30g.bin64"/>
+        <externalRef confidence="0.0592379" reference="ili-30-02722663-v" resource="wn30g.bin64"/>
+        <externalRef confidence="0.0475208" reference="ili-30-00899956-v" resource="wn30g.bin64"/>
+        <externalRef confidence="0.0442029" reference="ili-30-02261888-v" resource="wn30g.bin64"/>
+        <externalRef confidence="0.0402001" reference="ili-30-02200686-v" resource="wn30g.bin64"/>
+        <externalRef confidence="0.0346643" reference="ili-30-00901103-v" resource="wn30g.bin64"/>
+        <externalRef confidence="0.0241716" reference="ili-30-00901651-v" resource="wn30g.bin64"/>
+        <externalRef confidence="0.0199437" reference="ili-30-01688771-v" resource="wn30g.bin64"/>
+        <externalRef confidence="0.0198917" reference="ili-30-01066433-v" resource="wn30g.bin64"/>
+        <externalRef confidence="0.12588485" reference="ili-30-00772967-v" resource="WordNet-3.0"/>
+        <externalRef confidence="0.09636203" reference="ili-30-00989602-v" resource="WordNet-3.0"/>
+        <externalRef confidence="0.087744296" reference="ili-30-02262752-v" resource="WordNet-3.0"/>
+        <externalRef confidence="0.094990134" reference="ili-30-02200686-v" resource="WordNet-3.0"/>
+        <externalRef confidence="0.10587545" reference="ili-30-01711445-v" resource="WordNet-3.0"/>
+        <externalRef confidence="0.11640344" reference="ili-30-02148788-v" resource="WordNet-3.0"/>
+        <externalRef confidence="0.09330387" reference="ili-30-02261888-v" resource="WordNet-3.0"/>
+        <externalRef confidence="0.09584377" reference="ili-30-02722663-v" resource="WordNet-3.0"/>
+        <externalRef confidence="0.09003009" reference="ili-30-00901103-v" resource="WordNet-3.0"/>
+        <externalRef confidence="0.09356208" reference="ili-30-01688771-v" resource="WordNet-3.0"/>
+        <externalRef reference="ili-30-01066433-v" resource="WordNet-3.0"/>
+        <externalRef reference="ili-30-00901651-v" resource="WordNet-3.0"/>
+        <externalRef reference="ili-30-00899956-v" resource="WordNet-3.0"/>
+      </externalReferences>
+    </term>
+    <term id="t14" lemma="the" morphofeat="DT" pos="D" type="close">
+      <span>
+        <!--the-->
+        <target id="w14"/>
+      </span>
+    </term>
+    <term id="t15" lemma="\" morphofeat="NNS" pos="N" type="open">
+      <span>
+        <!--\-->
+        <target id="w15"/>
+      </span>
+    </term>
+  </terms>
+  <deps>
+    <!--ADV(will,In)-->
+    <dep from="t12" rfunc="ADV" to="t1"/>
+    <!--DEP(In,order)-->
+    <dep from="t1" rfunc="DEP" to="t2"/>
+    <!--SUB(In,to)-->
+    <dep from="t1" rfunc="SUB" to="t3"/>
+    <!--IM(to,encourage)-->
+    <dep from="t3" rfunc="IM" to="t4"/>
+    <!--OBJ(encourage,innovation)-->
+    <dep from="t4" rfunc="OBJ" to="t5"/>
+    <!--COORD(innovation,and)-->
+    <dep from="t5" rfunc="COORD" to="t6"/>
+    <!--CONJ(and,entrepreneurship)-->
+    <dep from="t6" rfunc="CONJ" to="t7"/>
+    <!--LOC(innovation,in)-->
+    <dep from="t5" rfunc="LOC" to="t8"/>
+    <!--PMOD(in,Africa)-->
+    <dep from="t8" rfunc="PMOD" to="t9"/>
+    <!--P(will,,)-->
+    <dep from="t12" rfunc="P" to="t10"/>
+    <!--SBJ(will,EMRC)-->
+    <dep from="t12" rfunc="SBJ" to="t11"/>
+    <!--VC(will,present)-->
+    <dep from="t12" rfunc="VC" to="t13"/>
+    <!--NMOD(\,the)-->
+    <dep from="t15" rfunc="NMOD" to="t14"/>
+    <!--OBJ(present,\)-->
+    <dep from="t13" rfunc="OBJ" to="t15"/>
+  </deps>
+  <entities>
+    <entity id="e1" type="LOC">
+      <references>
+        <span>
+          <!--Africa-->
+          <target id="t9"/>
+        </span>
+      </references>
+      <externalReferences>
+        <externalRef confidence="6.941715E-13" reference="http://dbpedia.org/resource/2008–09_Zimbabwean_political_negotiations" reftype="en" resource="spotlight_v1" source="en"/>
+        <externalRef confidence="8.391665E-13" reference="http://dbpedia.org/resource/Africa_(Toto_song)" reftype="en" resource="spotlight_v1" source="en"/>
+        <externalRef confidence="1.5741277E-12" reference="http://dbpedia.org/resource/Praetorian_prefecture_of_Africa" reftype="en" resource="spotlight_v1" source="en"/>
+        <externalRef confidence="1.948713E-12" reference="http://dbpedia.org/resource/North_Africa_during_Antiquity" reftype="en" resource="spotlight_v1" source="en"/>
+        <externalRef confidence="2.1262026E-12" reference="http://dbpedia.org/resource/List_of_sovereign_states_and_dependent_territories_in_Africa" reftype="en" resource="spotlight_v1" source="en"/>
+        <externalRef confidence="5.6423585E-12" reference="http://dbpedia.org/resource/Diocese_of_Africa" reftype="en" resource="spotlight_v1" source="en"/>
+        <externalRef confidence="4.333319E-7" reference="http://dbpedia.org/resource/Exarchate_of_Africa" reftype="en" resource="spotlight_v1" source="en"/>
+        <externalRef confidence="1.2688109E-6" reference="http://dbpedia.org/resource/Confederation_of_African_Football" reftype="en" resource="spotlight_v1" source="en"/>
+        <externalRef confidence="1.6444255E-4" reference="http://dbpedia.org/resource/Africa_(Roman_province)" reftype="en" resource="spotlight_v1" source="en"/>
+        <externalRef confidence="0.9998339" reference="http://dbpedia.org/resource/Africa" reftype="en" resource="spotlight_v1" source="en">
+          <externalRef confidence="0.9998339" reference="http://dbpedia.org/resource/Africa_(Roman_province)" reftype="en" resource="wikipedia-db-nlEn" source="en"/>
+        </externalRef>
+        <externalRef confidence="1.0" reference="http://dbpedia.org/resource/Africa" resource="dbp" source="POCUS"/>
+      </externalReferences>
+    </entity>
+    <entity id="e2" type="LOC">
+      <references>
+        <span>
+          <!--EMRC-->
+          <target id="t11"/>
+        </span>
+      </references>
+      <externalReferences>
+        <externalRef confidence="0.82442856" reference="http://dbpedia.org/resource/European_Marketing_Research_Centre" reftype="en" resource="spotlight_v1" source="en"/>
+        <externalRef confidence="1.0" reference="http://dbpedia.org/resource/European_Marketing_Research_Centre" resource="dbp" source="POCUS"/>
+      </externalReferences>
+    </entity>
+  </entities>
+  <coreferences>
+    <coref id="coevent1" type="event">
+      <span>
+        <!--present-->
+        <target id="t13"/>
+      </span>
+      <externalReferences>
+        <externalRef confidence="0.9623409409472228" reference="ili-30-02148788-v" resource="WordNet-3.0" source="dominant_sense"/>
+        <externalRef confidence="0.8410499754338986" reference="ili-30-01711445-v" resource="WordNet-3.0" source="dominant_sense"/>
+        <externalRef confidence="1.0" reference="ili-30-00772967-v" resource="WordNet-3.0" source="dominant_sense"/>
+      </externalReferences>
+    </coref>
+    <coref id="coevent2" type="event">
+      <span>
+        <!--order-->
+        <target id="t2"/>
+      </span>
+      <externalReferences>
+        <externalRef confidence="0.9590076463394188" reference="ili-30-07168623-n" resource="WordNet-3.0" source="dominant_sense"/>
+        <externalRef confidence="1.0" reference="ili-30-14496710-n" resource="WordNet-3.0" source="dominant_sense"/>
+      </externalReferences>
+    </coref>
+    <coref id="coevent3" type="event">
+      <span>
+        <!--encourage-->
+        <target id="t4"/>
+      </span>
+      <externalReferences>
+        <externalRef confidence="1.0" reference="ili-30-02554922-v" resource="WordNet-3.0" source="dominant_sense"/>
+      </externalReferences>
+    </coref>
+    <coref id="coevent4" type="event">
+      <span>
+        <!--innovation-->
+        <target id="t5"/>
+      </span>
+      <externalReferences>
+        <externalRef confidence="1.0" reference="ili-30-05633385-n" resource="WordNet-3.0" source="dominant_sense"/>
+        <externalRef confidence="0.9905334418958018" reference="ili-30-03582658-n" resource="WordNet-3.0" source="dominant_sense"/>
+      </externalReferences>
+    </coref>
+  </coreferences>
+  <constituency>
+    <tree>
+      <t id="ter1">
+        <!--In-->
+        <span>
+          <target id="t1"/>
+        </span>
+      </t>
+      <t id="ter2">
+        <!--order-->
+        <span>
+          <target id="t2"/>
+        </span>
+      </t>
+      <t id="ter3">
+        <!--to-->
+        <span>
+          <target id="t3"/>
+        </span>
+      </t>
+      <t id="ter4">
+        <!--encourage-->
+        <span>
+          <target id="t4"/>
+        </span>
+      </t>
+      <t id="ter5">
+        <!--innovation-->
+        <span>
+          <target id="t5"/>
+        </span>
+      </t>
+      <t id="ter6">
+        <!--and-->
+        <span>
+          <target id="t6"/>
+        </span>
+      </t>
+      <t id="ter7">
+        <!--entrepreneurship-->
+        <span>
+          <target id="t7"/>
+        </span>
+      </t>
+      <t id="ter8">
+        <!--in-->
+        <span>
+          <target id="t8"/>
+        </span>
+      </t>
+      <t id="ter9">
+        <!--Africa-->
+        <span>
+          <target id="t9"/>
+        </span>
+      </t>
+      <t id="ter10">
+        <!--,-->
+        <span>
+          <target id="t10"/>
+        </span>
+      </t>
+      <t id="ter11">
+        <!--EMRC-->
+        <span>
+          <target id="t11"/>
+        </span>
+      </t>
+      <t id="ter12">
+        <!--will-->
+        <span>
+          <target id="t12"/>
+        </span>
+      </t>
+      <t id="ter13">
+        <!--present-->
+        <span>
+          <target id="t13"/>
+        </span>
+      </t>
+      <t id="ter14">
+        <!--the-->
+        <span>
+          <target id="t14"/>
+        </span>
+      </t>
+      <t id="ter15">
+        <!--\-->
+        <span>
+          <target id="t15"/>
+        </span>
+      </t>
+      <nt id="nter1" label="TOP"/>
+      <nt id="nter2" label="S"/>
+      <nt id="nter3" label="SBAR"/>
+      <nt id="nter4" label="IN"/>
+      <nt id="nter5" label="NN"/>
+      <nt id="nter6" label="S"/>
+      <nt id="nter7" label="VP"/>
+      <nt id="nter8" label="TO"/>
+      <nt id="nter9" label="VP"/>
+      <nt id="nter10" label="VB"/>
+      <nt id="nter11" label="NP"/>
+      <nt id="nter12" label="NP"/>
+      <nt id="nter13" label="NN"/>
+      <nt id="nter14" label="CC"/>
+      <nt id="nter15" label="NN"/>
+      <nt id="nter16" label="PP"/>
+      <nt id="nter17" label="IN"/>
+      <nt id="nter18" label="NP"/>
+      <nt id="nter19" label="NNP"/>
+      <nt id="nter20" label=","/>
+      <nt id="nter21" label="NP"/>
+      <nt id="nter22" label="NNP"/>
+      <nt id="nter23" label="VP"/>
+      <nt id="nter24" label="MD"/>
+      <nt id="nter25" label="VP"/>
+      <nt id="nter26" label="VB"/>
+      <nt id="nter27" label="NP"/>
+      <nt id="nter28" label="DT"/>
+      <nt id="nter29" label="NN"/>
+      <edge from="nter2" head="yes" id="tre2" to="nter1"/>
+      <edge from="nter3" id="tre3" to="nter2"/>
+      <edge from="nter4" head="yes" id="tre4" to="nter3"/>
+      <edge from="ter1" id="tre5" to="nter4"/>
+      <edge from="nter5" id="tre6" to="nter3"/>
+      <edge from="ter2" id="tre7" to="nter5"/>
+      <edge from="nter6" id="tre8" to="nter3"/>
+      <edge from="nter7" head="yes" id="tre9" to="nter6"/>
+      <edge from="nter8" head="yes" id="tre10" to="nter7"/>
+      <edge from="ter3" id="tre11" to="nter8"/>
+      <edge from="nter9" id="tre12" to="nter7"/>
+      <edge from="nter10" head="yes" id="tre13" to="nter9"/>
+      <edge from="ter4" id="tre14" to="nter10"/>
+      <edge from="nter11" id="tre15" to="nter9"/>
+      <edge from="nter12" head="yes" id="tre16" to="nter11"/>
+      <edge from="nter13" id="tre17" to="nter12"/>
+      <edge from="ter5" id="tre18" to="nter13"/>
+      <edge from="nter14" id="tre19" to="nter12"/>
+      <edge from="ter6" id="tre20" to="nter14"/>
+      <edge from="nter15" head="yes" id="tre21" to="nter12"/>
+      <edge from="ter7" id="tre22" to="nter15"/>
+      <edge from="nter16" id="tre23" to="nter11"/>
+      <edge from="nter17" head="yes" id="tre24" to="nter16"/>
+      <edge from="ter8" id="tre25" to="nter17"/>
+      <edge from="nter18" id="tre26" to="nter16"/>
+      <edge from="nter19" head="yes" id="tre27" to="nter18"/>
+      <edge from="ter9" id="tre28" to="nter19"/>
+      <edge from="nter20" id="tre29" to="nter2"/>
+      <edge from="ter10" id="tre30" to="nter20"/>
+      <edge from="nter21" id="tre31" to="nter2"/>
+      <edge from="nter22" head="yes" id="tre32" to="nter21"/>
+      <edge from="ter11" id="tre33" to="nter22"/>
+      <edge from="nter23" head="yes" id="tre34" to="nter2"/>
+      <edge from="nter24" head="yes" id="tre35" to="nter23"/>
+      <edge from="ter12" id="tre36" to="nter24"/>
+      <edge from="nter25" id="tre37" to="nter23"/>
+      <edge from="nter26" head="yes" id="tre38" to="nter25"/>
+      <edge from="ter13" id="tre39" to="nter26"/>
+      <edge from="nter27" id="tre40" to="nter25"/>
+      <edge from="nter28" id="tre41" to="nter27"/>
+      <edge from="ter14" id="tre42" to="nter28"/>
+      <edge from="nter29" head="yes" id="tre43" to="nter27"/>
+      <edge from="ter15" id="tre44" to="nter29"/>
+    </tree>
+  </constituency>
+  <srl>
+    <predicate id="pr1">
+      <!--present-->
+      <externalReferences>
+        <externalRef reference="present.01" resource="PropBank"/>
+        <externalRef reference="fulfilling-13.4.1" resource="VerbNet"/>
+        <externalRef reference="reflexive_appearance-48.1.2" resource="VerbNet"/>
+        <externalRef reference="Presence" resource="FrameNet"/>
+        <externalRef reference="present.01" resource="PropBank"/>
+        <externalRef reference="BeingAtAPlace" resource="ESO"/>
+        <externalRef reference="communication" resource="EventType"/>
+        <externalRef reference="ili-30-02148788-v" resource="WordNet"/>
+        <externalRef reference="ili-30-00772967-v" resource="WordNet"/>
+        <externalRef reference="ili-30-01066433-v" resource="WordNet"/>
+        <externalRef reference="ili-30-02722663-v" resource="WordNet"/>
+      </externalReferences>
+      <span>
+        <target id="t13"/>
+      </span>
+      <role id="rl1" semRole="AM-LOC">
+        <!--In order to encourage innovation and entrepreneurship in Africa-->
+        <span>
+          <target head="yes" id="t1"/>
+          <target id="t2"/>
+          <target id="t3"/>
+          <target id="t4"/>
+          <target id="t5"/>
+          <target id="t6"/>
+          <target id="t7"/>
+          <target id="t8"/>
+          <target id="t9"/>
+        </span>
+      </role>
+      <role id="rl2" semRole="A0">
+        <!--EMRC-->
+        <externalReferences>
+          <externalRef reference="fulfilling-13.4.1@Agent" resource="VerbNet"/>
+          <externalRef reference="reflexive_appearance-48.1.2@Agent" resource="VerbNet"/>
+          <externalRef reference="Presence@Entity" resource="FrameNet"/>
+          <externalRef reference="present.01@0" resource="PropBank"/>
+          <externalRef reference="BeingAtAPlace@atPlace-theme" resource="ESO"/>
+        </externalReferences>
+        <span>
+          <target head="yes" id="t11"/>
+        </span>
+      </role>
+      <role id="rl3" semRole="AM-MOD">
+        <!--In order to encourage innovation and entrepreneurship in Africa , EMRC will present the \-->
+        <span>
+          <target id="t1"/>
+          <target id="t2"/>
+          <target id="t3"/>
+          <target id="t4"/>
+          <target id="t5"/>
+          <target id="t6"/>
+          <target id="t7"/>
+          <target id="t8"/>
+          <target id="t9"/>
+          <target id="t10"/>
+          <target id="t11"/>
+          <target head="yes" id="t12"/>
+          <target id="t13"/>
+          <target id="t14"/>
+          <target id="t15"/>
+        </span>
+      </role>
+      <role id="rl4" semRole="A1">
+        <!--the \-->
+        <externalReferences>
+          <externalRef reference="fulfilling-13.4.1@Theme" resource="VerbNet"/>
+          <externalRef reference="reflexive_appearance-48.1.2@Theme" resource="VerbNet"/>
+          <externalRef reference="Presence@Location" resource="FrameNet"/>
+          <externalRef reference="present.01@1" resource="PropBank"/>
+          <externalRef reference="BeingAtAPlace@atPlace-location" resource="ESO"/>
+        </externalReferences>
+        <span>
+          <target id="t14"/>
+          <target head="yes" id="t15"/>
+        </span>
+      </role>
+    </predicate>
+    <predicate id="pr2">
+      <!--order-->
+      <externalReferences>
+        <externalRef reference="order.06" resource="NomBank"/>
+      </externalReferences>
+      <span>
+        <target id="t2"/>
+      </span>
+      <role id="rl5" semRole="A1">
+        <!--to encourage innovation and entrepreneurship in Africa-->
+        <span>
+          <target head="yes" id="t3"/>
+          <target id="t4"/>
+          <target id="t5"/>
+          <target id="t6"/>
+          <target id="t7"/>
+          <target id="t8"/>
+          <target id="t9"/>
+        </span>
+      </role>
+    </predicate>
+    <predicate id="pr3">
+      <!--encourage-->
+      <externalReferences>
+        <externalRef reference="encourage.02" resource="PropBank"/>
+        <externalRef reference="accept-77" resource="VerbNet"/>
+        <externalRef reference="amuse-31.1" resource="VerbNet"/>
+        <externalRef reference="promote-102" resource="VerbNet"/>
+        <externalRef reference="Attempt_suasion" resource="FrameNet"/>
+        <externalRef reference="Intentionally_create" resource="FrameNet"/>
+        <externalRef reference="encourage.02" resource="PropBank"/>
+        <externalRef reference="Creating" resource="ESO"/>
+        <externalRef reference="contextual" resource="EventType"/>
+        <externalRef reference="ili-30-01818235-v" resource="WordNet"/>
+        <externalRef reference="ili-30-02554922-v" resource="WordNet"/>
+      </externalReferences>
+      <span>
+        <target id="t4"/>
+      </span>
+      <role id="rl6" semRole="A1">
+        <!--innovation and entrepreneurship in Africa-->
+        <externalReferences>
+          <externalRef reference="accept-77@Theme" resource="VerbNet"/>
+          <externalRef reference="amuse-31.1@Experiencer" resource="VerbNet"/>
+          <externalRef reference="promote-102@Theme" resource="VerbNet"/>
+          <externalRef reference="Attempt_suasion@Content" resource="FrameNet"/>
+          <externalRef reference="Attempt_suasion@Topic" resource="FrameNet"/>
+          <externalRef reference="encourage.02@1" resource="PropBank"/>
+        </externalReferences>
+        <span>
+          <target head="yes" id="t5"/>
+          <target id="t6"/>
+          <target id="t7"/>
+          <target id="t8"/>
+          <target id="t9"/>
+        </span>
+      </role>
+    </predicate>
+    <predicate id="pr4">
+      <!--innovation-->
+      <externalReferences>
+        <externalRef reference="innovation.01" resource="NomBank"/>
+        <externalRef reference="establish-55.5" resource="VerbNet"/>
+        <externalRef reference="Intentionally_create" resource="FrameNet"/>
+        <externalRef reference="innovate.01" resource="PropBank"/>
+        <externalRef reference="IntentionalEvent" resource="ESO"/>
+        <externalRef reference="contextual" resource="EventType"/>
+        <externalRef reference="ili-30-01642437-v" resource="WordNet"/>
+      </externalReferences>
+      <span>
+        <target id="t5"/>
+      </span>
+      <role id="rl7" semRole="AM-LOC">
+        <!--in Africa-->
+        <span>
+          <target head="yes" id="t8"/>
+          <target id="t9"/>
+        </span>
+      </role>
+    </predicate>
+  </srl>
+  <timeExpressions>
+    <timex3 functionInDocument="CREATION_TIME" id="tmx0" type="DATE" value="2015-09-14T05:27:34Z"/>
+  </timeExpressions>
+  <topics>
+    <topic confidence="0.15424969792366028" method="JEX" source="ixa-pipe-topic-en">economic growth</topic>
+    <topic confidence="0.1463010311126709" method="JEX" source="ixa-pipe-topic-en">competitiveness</topic>
+    <topic confidence="0.08578655868768692" method="JEX" source="ixa-pipe-topic-en">employment policy</topic>
+    <topic confidence="0.08301658928394318" method="JEX" source="ixa-pipe-topic-en">small and medium-sized enterprises</topic>
+    <topic confidence="0.06188245117664337" method="JEX" source="ixa-pipe-topic-en">budgetary expenditure</topic>
+    <topic confidence="0.05768102407455444" method="JEX" source="ixa-pipe-topic-en">European Union</topic>
+  </topics>
+  <markables>
+    <mark id="m1" lemma="order" source="DBpedia">
+      <span>
+        <!--order-->
+        <target id="w2"/>
+      </span>
+      <externalReferences>
+        <externalRef confidence="0.9803931" reference="http://dbpedia.org/resource/Order_(biology)" reftype="en" resource="spotlight" source="en"/>
+      </externalReferences>
+    </mark>
+    <mark id="m2" lemma="innovation" source="DBpedia">
+      <span>
+        <!--innovation-->
+        <target id="w5"/>
+      </span>
+      <externalReferences>
+        <externalRef confidence="0.99997246" reference="http://dbpedia.org/resource/Innovation" reftype="en" resource="spotlight" source="en"/>
+      </externalReferences>
+    </mark>
+    <mark id="m3" lemma="entrepreneurship" source="DBpedia">
+      <span>
+        <!--entrepreneurship-->
+        <target id="w7"/>
+      </span>
+      <externalReferences>
+        <externalRef confidence="0.99998933" reference="http://dbpedia.org/resource/Entrepreneurship" reftype="en" resource="spotlight" source="en"/>
+      </externalReferences>
+    </mark>
+    <mark id="m4" lemma="Africa" source="DBpedia">
+      <span>
+        <!--Africa-->
+        <target id="w9"/>
+      </span>
+      <externalReferences>
+        <externalRef confidence="0.9998339" reference="http://dbpedia.org/resource/Africa" reftype="en" resource="spotlight" source="en"/>
+      </externalReferences>
+    </mark>
+    <mark id="m5" lemma="EMRC" source="DBpedia">
+      <span>
+        <!--EMRC-->
+        <target id="w11"/>
+      </span>
+      <externalReferences>
+        <externalRef confidence="0.82442856" reference="http://dbpedia.org/resource/European_Marketing_Research_Centre" reftype="en" resource="spotlight" source="en"/>
+      </externalReferences>
+    </mark>
+  </markables>
+  <factualities>
+    <factuality id="f1">
+      <span>
+        <target id="t4"/>
+      </span>
+      <factVal resource="nwr:attributionTense" value="UNDERSPECIFIED"/>
+      <factVal resource="factbank" value="NONE"/>
+      <factVal resource="nwr:attributionCertainty" value="CERTAIN"/>
+      <factVal resource="nwr:attributionPolarity" value="POS"/>
+    </factuality>
+    <factuality id="f2">
+      <span>
+        <target id="t5"/>
+      </span>
+      <factVal resource="nwr:attributionTense" value="UNDERSPECIFIED"/>
+      <factVal resource="factbank" value="NONE"/>
+      <factVal resource="nwr:attributionCertainty" value="CERTAIN"/>
+      <factVal resource="nwr:attributionPolarity" value="POS"/>
+    </factuality>
+    <factuality id="f3">
+      <span>
+        <target id="t2"/>
+      </span>
+      <factVal resource="nwr:attributionTense" value="UNDERSPECIFIED"/>
+      <factVal resource="factbank" value="NONE"/>
+      <factVal resource="nwr:attributionCertainty" value="CERTAIN"/>
+      <factVal resource="nwr:attributionPolarity" value="POS"/>
+    </factuality>
+    <factuality id="f4">
+      <span>
+        <target id="t13"/>
+      </span>
+      <factVal resource="nwr:attributionTense" value="FUTURE"/>
+      <factVal resource="factbank" value="CT+"/>
+      <factVal resource="nwr:attributionCertainty" value="CERTAIN"/>
+      <factVal resource="nwr:attributionPolarity" value="POS"/>
+    </factuality>
+  </factualities>
+</NAF>

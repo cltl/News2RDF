@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<NAF version="v3" xml:lang="en">
+  <nafHeader>
+    <fileDesc creationtime="2015-09-01T06:34:59Z" filename="4336860e-fa87-4f54-b3ce-b4afb72c4acd.in.naf"/>
+    <public publicId="4336860e-fa87-4f54-b3ce-b4afb72c4acd" uri="sigmed/data/4336860e-fa87-4f54-b3ce-b4afb72c4acd.in.naf"/>
+    <linguisticProcessors layer="srl">
+      <lp beginTimestamp="2016-02-26T15:03:53+0100" endTimestamp="2016-02-26T15:03:56+0100" hostname="r38n21.lisa.surfsara.nl" name="ixa-pipe-srl-en" version="1.0"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="topics">
+      <lp beginTimestamp="2016-02-26T15:02:46+0100" endTimestamp="2016-02-26T15:02:50+0100" hostname="r38n21.lisa.surfsara.nl" name="ixa-pipe-topic-en" version="1.0.1-e5736af6cd0dabc10434ad6dcdaa86ecf361896c"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="text">
+      <lp beginTimestamp="2016-02-26T15:02:45+0100" endTimestamp="2016-02-26T15:02:45+0100" hostname="r38n21.lisa.surfsara.nl" name="ixa-pipe-tok-en" version="1.8.0-56f83ce4b61680346f15e5d4e6de6293764f7383"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="causalRelations">
+      <lp beginTimestamp="2016-02-26T15:04:06+0100" endTimestamp="2016-02-26T15:04:07+0100" hostname="r38n21.lisa.surfsara.nl" name="CausalRelPro-FBK" version="2.0.0"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="coreferences">
+      <lp beginTimestamp="2016-02-26T14:03:51Z" endTimestamp="2016-02-26T14:03:52Z" hostname="r38n21.lisa.surfsara.nl" name="corefgraph-en" version="0.8"/>
+      <lp beginTimestamp="2016-02-26T15:04:11+0100" endTimestamp="2016-02-26T15:04:11+0100" hostname="r38n21.lisa.surfsara.nl" name="vua-event-coref-intradoc-wn-sim" timestamp="2016-02-26T15:04:11+0100" version="3.0"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="constituency">
+      <lp beginTimestamp="2016-02-26T15:02:53+0100" endTimestamp="2016-02-26T15:03:00+0100" hostname="r38n21.lisa.surfsara.nl" name="ixa-pipe-parse-en-parser-chunking" version="1.1.1-f4c6e03b9afd8b70d8cf403f43055d28e3b0e874"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="terms">
+      <lp beginTimestamp="2016-02-26T15:02:53+0100" endTimestamp="2016-02-26T15:02:53+0100" hostname="r38n21.lisa.surfsara.nl" name="ixa-pipe-pos-en-maxent-100-c5-baseline-dict-penn" version="1.4.3-192b8ca8980904d09e8d9f7343621174b6b98978"/>
+      <lp beginTimestamp="2016-02-26T14:03:41Z" endTimestamp="2016-02-26T14:03:45Z" hostname="r38n21.lisa.surfsara.nl" name="ukb" version="2.0.22.g0edc5ba"/>
+      <lp beginTimestamp="2016-02-26T15:03:51CET" endTimestamp="2016-02-26T15:03:51CET" hostname="r38n21.lisa.surfsara.nl" name="It_Makes_Sense_WSD" timestamp="2016-02-26T15:03:51CET" version="0.4"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="markables">
+      <lp beginTimestamp="2016-02-26T15:03:41+0100" endTimestamp="2016-02-26T15:03:41+0100" hostname="r38n21.lisa.surfsara.nl" name="ixa-pipe-wikify-en" version="1.2.1-b2d597d79cc928549bf6df6e13894a183be99dcf"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="deps">
+      <lp beginTimestamp="2016-02-26T15:03:53+0100" endTimestamp="2016-02-26T15:03:53+0100" hostname="r38n21.lisa.surfsara.nl" name="ixa-pipe-srl-en" version="1.0"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="temporalRelations">
+      <lp beginTimestamp="2016-02-26T15:03:59+0100" endTimestamp="2016-02-26T15:04:00+0100" hostname="r38n21.lisa.surfsara.nl" name="TempRelPro-FBK" version="2.5.0"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="entities">
+      <lp beginTimestamp="2016-02-26T15:03:01+0100" endTimestamp="2016-02-26T15:03:33+0100" hostname="r38n21.lisa.surfsara.nl" name="ixa-pipe-nerc-en-best-clusters-conll03" version="1.5.4-ca02c931bc0b200ccdb8b5795a7552e4cc0d4802"/>
+      <lp beginTimestamp="2016-02-26T15:03:34+0100" endTimestamp="2016-02-26T15:03:35+0100" hostname="r38n21.lisa.surfsara.nl" name="ixa-pipe-ned-en" version="1.1.1-d35d4df5cb71940bf642bb1a83e2b5b7584010df"/>
+      <lp beginTimestamp="2016-02-26T15:03:39CET" endTimestamp="2016-02-26T15:03:39CET" hostname="r38n21.lisa.surfsara.nl" name="VUA-popen-ned-reranker" timestamp="2016-02-26T15:03:39CET" version="1.0"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="timeExpressions">
+      <lp beginTimestamp="2016-02-26T15:03:56+0100" endTimestamp="2016-02-26T15:03:58+0100" hostname="r38n21.lisa.surfsara.nl" name="TimePro-FBK" version="v1.5, based on Yamcha"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="factualities">
+      <lp name="vua-perspectives_factuality" version="1.0" timestamp="2016-02-26T15:04:12CET" beginTimestamp="2016-02-26T15:04:11CET" endTimestamp="2016-02-26T15:04:12CET" hostname="r38n21.lisa.surfsara.nl"/>
+    </linguisticProcessors>
+    <linguisticProcessors layer="opinions">
+      <lp name="Deluxe opinion miner (CRF+SVM)" version="10jan2014_2.0" timestamp="2016-02-26T15:04:12CET" beginTimestamp="2016-02-26T15:04:12CET" endTimestamp="2016-02-26T15:04:12CET" hostname="r38n21.lisa.surfsara.nl"/>
+    </linguisticProcessors>
+  </nafHeader>
+  <raw>\</raw>
+  <text>
+    <wf id="w1" length="1" offset="0" para="1" sent="1">\</wf>
+  </text>
+  <terms>
+    <term id="t1" lemma="\" morphofeat="NNS" pos="N" type="open">
+      <span>
+        <!--\-->
+        <target id="w1"/>
+      </span>
+    </term>
+  </terms>
+  <constituency>
+    <tree>
+      <t id="ter1">
+        <!--\-->
+        <span>
+          <target id="t1"/>
+        </span>
+      </t>
+      <nt id="nter1" label="TOP"/>
+      <nt id="nter2" label="."/>
+      <edge from="nter2" head="yes" id="tre2" to="nter1"/>
+      <edge from="ter1" id="tre3" to="nter2"/>
+    </tree>
+  </constituency>
+  <timeExpressions>
+    <timex3 functionInDocument="CREATION_TIME" id="tmx0" type="DATE" value="2015-09-01T06:34:59Z"/>
+  </timeExpressions>
+  <factualities/>
+</NAF>
