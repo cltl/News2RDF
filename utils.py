@@ -263,13 +263,21 @@ def load_article_into_newsitem_class(info_about_news_item):
 
     return a_news_item
 
-sentenceURI=URIRef("http://longtailcorpus.org/vocab/sent")
 NIF = Namespace("http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#")
-newsItemType=URIRef("http://longtailcorpus.org/NewsItem")
-entityType=URIRef("http://longtailcorpus.org/Entity")
+GAF = Namespace("http://groundedannotationframework.org/gaf#")
+CLTLV = Namespace("http://cltl.nl/vocab/")
+
+newsItemType=URIRef("%sContext" % NIF)
+cltlPrefix='http://cltl.nl/'
+cltlDataPrefix='%sdata/' % cltlPrefix
+cltlTopicPrefix='%stopic' % cltlPrefix
+
 
 def create_publisher_uri(p):
     return ('http://longtailcorpus.org/publisher/%s' % re.sub(r'\W+', '', p))
+
+def create_topic_uri(domain):
+    return '%s%s' % (cltlTopicPrefix, domain)
 
 def rdfize_news_item(a_news_item, g):
     """
@@ -283,29 +291,71 @@ def rdfize_news_item(a_news_item, g):
     newsItem = URIRef(newsItemURIString)
 
     # Add the news item triples to the graph
+    g.add(( newsItem, RDF.type, newsItemType))
     g.add(( newsItem, DCTERMS.source, Literal(news_item_id) ))
-    g.add(( newsItem, DCTERMS.isPartOf, Literal(a_news_item.collection) ))
+    g.add(( newsItem, DCTERMS.isPartOf, URIRef('%s%s' % (cltlDataPrefix, a_news_item.collection)) ))
     dct=datetime.datetime.strptime(a_news_item.dct, '%Y-%m-%dT%H:%M:%SZ') # 2015-09-04T10:43:03Z
     g.add(( newsItem, DCTERMS.created, Literal(dct)))
     g.add(( newsItem, DCTERMS.publisher, URIRef(create_publisher_uri(a_news_item.publisher))))
-    g.add(( newsItem, RDF.type, newsItemType))
+    if a_news_item.domain:
+        g.add(( newsItem, DCT.subject, URIRef(create_topic_uri(a_news_item.domain)) ))
 
     # iterate through the entity mentions
     for entity_mention_obj in a_news_item.entity_mentions:
         # create URI for this entity mention
-        entityMentionURIString="%s#char=%d,%d" % (newsItemURIString, 
+        entityMentionURIString="%s#mention=%d,%d" % (newsItemURIString,
                                                   entity_mention_obj.begin_index,
                                                   entity_mention_obj.end_index)
+        instanceURI=URIRef("%s#entity=%d,%d" % (newsItemURIString,
+                                                  entity_mention_obj.begin_index,
+                                                  entity_mention_obj.end_index))
         entityMentionURI=URIRef(entityMentionURIString)
 
+        g.add((entityMentionURI, RDF.type, GAF.Mention))
         # add entity mention triples
+        g.add((entityMentionURI, CLTLV.sent, Literal(int(entity_mention_obj.sentence))))
         g.add((entityMentionURI, NIF.anchorOf, Literal(entity_mention_obj.mention)))
-        g.add((entityMentionURI, RDF.type, Literal(entity_mention_obj.the_type)))
+#        if entity_mention_obj.lemma:
+#            g.add((entityMentionURI, NIF.lemma, Literal(entity_mention.obj.lemma) ))
+        g.add(( entityMentionURI, NIF.referenceContext, newsItem ))
+        g.add(( entityMentionURI, GAF.denotes, instanceURI ))
+        g.add((instanceURI, RDF.type, GAF.Instance))
+        g.add((instanceURI, RDF.type, CLTLV.Entity))
+        g.add((instanceURI, RDF.type, Literal(entity_mention_obj.the_type)))
         g.add((entityMentionURI, NIF.beginIndex, Literal(entity_mention_obj.begin_index)))
         g.add((entityMentionURI, NIF.endIndex, Literal(entity_mention_obj.end_index)))
-        g.add((entityMentionURI, sentenceURI, Literal(int(entity_mention_obj.sentence))))
-        g.add((entityMentionURI, RDF.type, entityType))
-        g.add((newsItem, URIRef("http://longtailcorpus.org/vocab/hasMention"), entityMentionURI))
+        g.add((entityMentionURI, PROV.wasAttributedTo, URIRef('%sprovenance/%s/entity' % (cltlPrefix, entity_mention_obj.provenance)) ))
+        if entity_mention_obj.meaning:
+            g.add(( instanceURI, OWL.sameAs, URIRef(entity_mention_obj.meaning) ))
+
+    # Iterate through the event mentions
+    for event_mention_obj in a_news_item.event_mentions:
+        # create URI for this entity mention
+        eventMentionURIString="%s#mention=%s" % (newsItemURIString,
+                                                  event_mention_obj.mention_offset_ranges)
+        instanceURI=URIRef("%s#event=%s" % (newsItemURIString,
+                                                  event_mention_obj.mention_offset_ranges))
+        eventMentionURI=URIRef(eventMentionURIString)
+
+        g.add((eventMentionURI, RDF.type, GAF.Mention))
+        # add entity mention triples
+        g.add((eventMentionURI, CLTLV.sent, Literal(int(event_mention_obj.sentence))))
+        g.add((eventMentionURI, NIF.anchorOf, Literal(event_mention_obj.mention)))
+        if event_mention_obj.lemma:
+            g.add((eventMentionURI, NIF.lemma, Literal(event_mention.obj.lemma) ))
+        g.add(( eventMentionURI, NIF.referenceContext, newsItem ))
+        g.add(( eventMentionURI, GAF.denotes, instanceURI ))
+        g.add((instanceURI, RDF.type, GAF.Instance))
+        g.add((instanceURI, RDF.type, CLTLV.Event))
+        #g.add((instanceURI, RDF.type, Literal(entity_mention_obj.the_type)))
+        # TODO: add begin and end offsets
+        #g.add((entityMentionURI, NIF.beginIndex, Literal(entity_mention_obj.begin_index)))
+        #g.add((entityMentionURI, NIF.endIndex, Literal(entity_mention_obj.end_index)))
+        g.add((eventMentionURI, PROV.wasAttributedTo, URIRef('%sprovenance/%s/event' % (cltlPrefix, event_mention_obj.provenance)) ))
+        if event_mention_obj.meaning:
+            g.add(( instanceURI, OWL.sameAs, URIRef(event_mention_obj.meaning) ))
+
+
 
     return g
     
@@ -316,7 +366,7 @@ def json2rdf(article, g):
     :param dict article: json of signalmedia article (dict in python)
     """
     a_news_item = load_article_into_newsitem_class(article)
-    # g = rdfize_news_item(a_news_item, g)
+    #g = rdfize_news_item(a_news_item, g)
     return g
 
 def locations2rdf():

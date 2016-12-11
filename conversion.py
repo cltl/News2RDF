@@ -34,4 +34,4 @@ for start in range(args.start_line, args.end_line, args.batch_size):
         #if counter % 100 == 0:
         #    logger.info('processed %s files' % counter)
 
-    #g.serialize(destination=output_path, format='turtle')
+    g.serialize(destination=output_path, format='turtle')
