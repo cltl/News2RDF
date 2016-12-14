@@ -30,8 +30,8 @@ for start in range(args.start_line, args.end_line, args.batch_size):
 
     for counter, info_about_news_item in enumerate(the_generator, start):
         g=utils.json2rdf(info_about_news_item, g)
-        break
-        #if counter % 100 == 0:
-        #    logger.info('processed %s files' % counter)
+#        break
+        if counter % 100 == 0:
+            logger.info('processed %s files' % counter)
 
     g.serialize(destination=output_path, format='turtle')

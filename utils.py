@@ -2,7 +2,8 @@ import json
 import logging
 import os
 from collections import namedtuple, defaultdict
-
+import urllib.parse
+import hashlib
 import spacy_to_naf
 import semeval_classes 
 from spacy.en import English
@@ -75,8 +76,8 @@ def process_first_x_files(path_signalmedia_json,
 
             if path_newsreader_nafs:
                 path_newsreader_naf = path_template.format_map(locals())
-                newsreader_naf = etree.parse(path_newsreader_naf)
                 if os.path.exists(path_newsreader_naf):
+                    newsreader_naf = etree.parse(path_newsreader_naf)
                     the_preprocessing.add(('newsreader', newsreader_naf))
 
             a_news_item = news_item(signalmedia_json=article,
@@ -265,19 +266,30 @@ def load_article_into_newsitem_class(info_about_news_item):
 
 NIF = Namespace("http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#")
 GAF = Namespace("http://groundedannotationframework.org/gaf#")
+PROV = Namespace("http://www.w3.org/ns/prov#")
 CLTLV = Namespace("http://cltl.nl/vocab/")
 
 newsItemType=URIRef("%sContext" % NIF)
 cltlPrefix='http://cltl.nl/'
 cltlDataPrefix='%sdata/' % cltlPrefix
-cltlTopicPrefix='%stopic' % cltlPrefix
+cltlTopicPrefix='%stopic/' % cltlPrefix
+cltlPublisherPrefix='%spublisher/' % cltlPrefix
+cltlNewsPrefix='%snews/' % cltlPrefix
+cltlTypePrefix='%stype/' % cltlPrefix
 
+def hash_offsets(hash_me):
+    hashhash=repr(hash_me).encode('utf-8')
+    hash_object=hashlib.md5(hashhash)
+    return hash_object.hexdigest()
 
 def create_publisher_uri(p):
-    return ('http://longtailcorpus.org/publisher/%s' % re.sub(r'\W+', '', p))
+    return '%s%s' % (cltlPublisherPrefix, re.sub(r'\W+', '', p))
 
 def create_topic_uri(domain):
-    return '%s%s' % (cltlTopicPrefix, domain)
+    return '%s%s' % (cltlTopicPrefix, re.sub(r'\W+', '', domain))
+
+def makeType(t):
+    return '%s%s' % (cltlTypePrefix, t)
 
 def rdfize_news_item(a_news_item, g):
     """
@@ -287,7 +299,7 @@ def rdfize_news_item(a_news_item, g):
     """
     news_item_id = a_news_item.identifier
     # create URI for this news item
-    newsItemURIString = "http://longtailcorpus.org/news/%s" % news_item_id
+    newsItemURIString = "%s%s" % (cltlNewsPrefix, news_item_id)
     newsItem = URIRef(newsItemURIString)
 
     # Add the news item triples to the graph
@@ -297,8 +309,10 @@ def rdfize_news_item(a_news_item, g):
     dct=datetime.datetime.strptime(a_news_item.dct, '%Y-%m-%dT%H:%M:%SZ') # 2015-09-04T10:43:03Z
     g.add(( newsItem, DCTERMS.created, Literal(dct)))
     g.add(( newsItem, DCTERMS.publisher, URIRef(create_publisher_uri(a_news_item.publisher))))
-    if a_news_item.domain:
-        g.add(( newsItem, DCT.subject, URIRef(create_topic_uri(a_news_item.domain)) ))
+    if a_news_item.domain and len(a_news_item.domain):
+        for domain in a_news_item.domain:
+            if domain:
+                g.add(( newsItem, DCTERMS.subject, URIRef(create_topic_uri(domain)) ))
 
     # iterate through the entity mentions
     for entity_mention_obj in a_news_item.entity_mentions:
@@ -321,7 +335,7 @@ def rdfize_news_item(a_news_item, g):
         g.add(( entityMentionURI, GAF.denotes, instanceURI ))
         g.add((instanceURI, RDF.type, GAF.Instance))
         g.add((instanceURI, RDF.type, CLTLV.Entity))
-        g.add((instanceURI, RDF.type, Literal(entity_mention_obj.the_type)))
+        g.add((instanceURI, RDF.type, URIRef(makeType(entity_mention_obj.the_type))))
         g.add((entityMentionURI, NIF.beginIndex, Literal(entity_mention_obj.begin_index)))
         g.add((entityMentionURI, NIF.endIndex, Literal(entity_mention_obj.end_index)))
         g.add((entityMentionURI, PROV.wasAttributedTo, URIRef('%sprovenance/%s/entity' % (cltlPrefix, entity_mention_obj.provenance)) ))
@@ -332,9 +346,9 @@ def rdfize_news_item(a_news_item, g):
     for event_mention_obj in a_news_item.event_mentions:
         # create URI for this entity mention
         eventMentionURIString="%s#mention=%s" % (newsItemURIString,
-                                                  event_mention_obj.mention_offset_ranges)
+                                                  hash_offsets(event_mention_obj.mention_offset_ranges))
         instanceURI=URIRef("%s#event=%s" % (newsItemURIString,
-                                                  event_mention_obj.mention_offset_ranges))
+                                                  hash_offsets(event_mention_obj.mention_offset_ranges)))
         eventMentionURI=URIRef(eventMentionURIString)
 
         g.add((eventMentionURI, RDF.type, GAF.Mention))
@@ -342,15 +356,15 @@ def rdfize_news_item(a_news_item, g):
         g.add((eventMentionURI, CLTLV.sent, Literal(int(event_mention_obj.sentence))))
         g.add((eventMentionURI, NIF.anchorOf, Literal(event_mention_obj.mention)))
         if event_mention_obj.lemma:
-            g.add((eventMentionURI, NIF.lemma, Literal(event_mention.obj.lemma) ))
+            g.add((eventMentionURI, NIF.lemma, Literal(event_mention_obj.lemma) ))
         g.add(( eventMentionURI, NIF.referenceContext, newsItem ))
         g.add(( eventMentionURI, GAF.denotes, instanceURI ))
+        for offset_range in event_mention_obj.mention_offset_ranges:    
+            g.add((eventMentionURI, NIF.beginIndex, Literal(offset_range[0])))
+            g.add((eventMentionURI, NIF.endIndex, Literal(offset_range[1])))
         g.add((instanceURI, RDF.type, GAF.Instance))
         g.add((instanceURI, RDF.type, CLTLV.Event))
         #g.add((instanceURI, RDF.type, Literal(entity_mention_obj.the_type)))
-        # TODO: add begin and end offsets
-        #g.add((entityMentionURI, NIF.beginIndex, Literal(entity_mention_obj.begin_index)))
-        #g.add((entityMentionURI, NIF.endIndex, Literal(entity_mention_obj.end_index)))
         g.add((eventMentionURI, PROV.wasAttributedTo, URIRef('%sprovenance/%s/event' % (cltlPrefix, event_mention_obj.provenance)) ))
         if event_mention_obj.meaning:
             g.add(( instanceURI, OWL.sameAs, URIRef(event_mention_obj.meaning) ))
@@ -366,7 +380,7 @@ def json2rdf(article, g):
     :param dict article: json of signalmedia article (dict in python)
     """
     a_news_item = load_article_into_newsitem_class(article)
-    #g = rdfize_news_item(a_news_item, g)
+    g = rdfize_news_item(a_news_item, g)
     return g
 
 def locations2rdf():
